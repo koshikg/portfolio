@@ -1,0 +1,115 @@
+[
+  {
+    "company": "Rio Tinto / Endava",
+    "title": "Senior DevOps Consultant",
+    "location": "Melbourne, Australia",
+    "range": "December 2023 - Present",
+    "responsibilities": [
+      "Consulting for Rio Tinto, integrating DevSecOps practices into both legacy and modern systems",
+      "Improving security and automation across large-scale global enterprise environments",
+      "Delivering infrastructure and CI/CD pipeline enhancements using Azure and GitHub Actions"
+    ]
+  },
+  {
+    "company": "Cognizant Servian",
+    "title": "Senior Consultant",
+    "location": "Melbourne, Australia",
+    "range": "May 2023 - November 2023",
+    "responsibilities": [
+      "Led internal projects under Squad 0, promoting continuous improvement and DevOps best practices",
+      "Collaborated across teams to align delivery with organizational DevOps goals",
+      "Enhanced platform performance and operational efficiency through automation and strategic tooling"
+    ]
+  },
+  {
+    "company": "BHP / Contino",
+    "title": "Senior Consultant",
+    "location": "Melbourne, Australia",
+    "range": "March 2022 - August 2023",
+    "responsibilities": [
+      "Spearheaded a team of 7 engineers to deliver platform improvements at BHP",
+      "Planned and executed Azure Landing Zone infrastructure for Woodside using Azure CAF Terraform",
+      "Led a critical migration project resulting in $130k license savings",
+      "Automated large-scale GitLab SaaS repository migration using Python"
+    ]
+  },
+  {
+    "company": "Guild Group",
+    "title": "Senior DevOps Engineer",
+    "location": "Melbourne, Australia",
+    "range": "February 2020 - March 2022",
+    "responsibilities": [
+      "Defined and implemented DevOps strategy and roadmaps across product teams",
+      "Automated environment provisioning and infrastructure for Guidewire using Azure and Terraform",
+      "Implemented monitoring with Datadog and Application Insights; alerting via OpsGenie",
+      "Presented technical knowledge-sharing sessions to development teams"
+    ]
+  },
+  {
+    "company": "Guild Group",
+    "title": "Azure Developer",
+    "location": "Melbourne, Australia",
+    "range": "August 2018 - February 2020",
+    "responsibilities": [
+      "Developed Azure-based microservices using Functions, Logic Apps, and Service Bus",
+      "Implemented CI/CD pipelines and ARM templates for infrastructure provisioning",
+      "Integrated security via Azure B2C and API Management",
+      "Created monitoring dashboards using Azure Log Analytics and Power BI"
+    ]
+  },
+  {
+    "company": "Wells Fargo",
+    "title": "Senior Technology Specialist",
+    "location": "Hyderabad, India",
+    "range": "March 2017 - July 2018",
+    "responsibilities": [
+      "Built and maintained .NET and Azure-based enterprise applications",
+      "Led Agile ceremonies including sprint planning and retrospectives",
+      "Implemented APIs, integrations, and reporting via SSIS/SSRS and SPLUNK"
+    ]
+  },
+  {
+    "company": "Wells Fargo",
+    "title": "Technology Specialist",
+    "location": "Hyderabad, India",
+    "range": "June 2014 - February 2017",
+    "responsibilities": [
+      "Worked on full-stack .NET development with Azure and SQL Server",
+      "Handled Service Bus, WebJobs, and WCF service integrations",
+      "Practiced Agile methodologies for project delivery"
+    ]
+  },
+  {
+    "company": "Wells Fargo",
+    "title": "Senior Analyst",
+    "location": "Hyderabad, India",
+    "range": "December 2012 - May 2014",
+    "responsibilities": [
+      "Developed ASP.NET MVC applications with LINQ and SQL Server backend",
+      "Generated business reports using SSIS, SSRS, and Crystal Reports",
+      "Developed secure WCF-based APIs and enterprise components"
+    ]
+  },
+  {
+    "company": "Wipro Limited",
+    "title": "Software Engineer",
+    "location": "Hyderabad, India",
+    "range": "August 2011 - December 2012",
+    "responsibilities": [
+      "Developed web applications using .NET Framework, MySQL, and Crystal Reports",
+      "Automated build and release pipelines for ESIC project",
+      "Utilized WCF and WPF for service and desktop app development"
+    ]
+  },
+  {
+    "company": "Wipro Limited",
+    "title": "Engineer Trainee",
+    "location": "Hyderabad, India",
+    "range": "August 2010 - August 2011",
+    "responsibilities": [
+      "Contributed to development and support of ASP.NET and WCF services",
+      "Used PowerShell and WMI for Windows server management",
+      "Maintained Crystal Reports and deployed solutions via IIS"
+    ]
+  }
+]

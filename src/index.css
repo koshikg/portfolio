@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/segoe-ui@4.5.0/index.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-gray-900 dark:text-text-primary min-h-screen font-segoe transition-colors duration-300;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-segoe font-bold tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  a {
+    @apply hover:text-primary transition-colors duration-300 underline underline-offset-4 decoration-primary/40;
+  }
+
+  code, pre {
+    @apply font-mono bg-gray-100 dark:bg-dark-secondary rounded px-1 py-0.5;
+  }
+}
+
+@layer components {
+  .section {
+    @apply py-20 md:py-32 px-4 md:px-0 rounded-md shadow-xl bg-white/80 dark:bg-dark/90 backdrop-blur-sm mb-12 border-l-4 border-primary border-t border-r border-b border-gray-200 dark:border-gray-700;
+  }
+
+  .container {
+    @apply max-w-4xl mx-auto px-4 sm:px-8;
+  }
+
+  /* Azure-style button */
+  .btn {
+    @apply px-8 py-3 font-semibold rounded-sm border-0 transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply text-white bg-primary hover:bg-primary-dark;
+  }
+
+  .btn-outline {
+    @apply text-primary border border-primary bg-transparent hover:bg-primary-dark hover:text-white hover:border-primary-dark;
+  }
+
+  /* Azure-style nav links */
+  .nav-link {
+    @apply relative text-gray-700 dark:text-text-secondary hover:text-primary dark:hover:text-primary font-medium px-3 py-2 transition-all duration-300 border-b-2 border-transparent hover:border-primary;
+  }
+
+  .active-nav-link {
+    @apply text-primary border-primary font-bold;
+  }
+  
+  /* Azure-style card */
+  .azure-card {
+    @apply bg-white dark:bg-dark-secondary rounded-md shadow-md border-t-4 border-primary border-l border-r border-b border-gray-200 dark:border-gray-700 overflow-hidden;
+  }
+  
+  /* Azure-style tag */
+  .azure-tag {
+    @apply inline-block px-3 py-1 text-xs font-medium rounded-sm bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary-light;
+  }
+}
+
+/* Plain CSS classes for missing utilities */
+.bg-light {
+  background-color: #f9fafb; /* gray-50 */
+}
+
+.bg-dark-light {
+  background-color: #1f2937; /* gray-800 */
+}
+
+.bg-light-dark {
+  background-color: #e5e7eb; /* gray-200 */
+}

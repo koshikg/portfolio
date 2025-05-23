@@ -1,0 +1,32 @@
+{
+  "name": "Kaushik Gayal",
+  "title": "DevOps & Cloud Consultant",
+  "location": "Melbourne, Australia",
+  "email": "gayal.kaushik@gmail.com",
+  "socials": {
+    "linkedin": "https://www.linkedin.com/in/kaushik-gayal-02a57316/?originalSubdomain=au",
+    "github": "https://github.com/kaushikgayal",
+    "blog": "https://kaushikgayal.wordpress.com/blogs/"
+  },  "navLinks": [
+    {
+      "name": "About",
+      "url": "#about"
+    },
+    {
+      "name": "Experience",
+      "url": "#experience"
+    },
+    {
+      "name": "Certifications",
+      "url": "#certifications"
+    },
+    {
+      "name": "Skills",
+      "url": "#skills"
+    },
+    {
+      "name": "Contact",
+      "url": "#contact"
+    }
+  ]
+}

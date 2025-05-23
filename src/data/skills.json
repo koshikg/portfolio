@@ -1,0 +1,273 @@
+{
+  "categories": [
+    {
+      "name": "CI/CD & DevOps Tools",
+      "items": [
+        "Azure DevOps Pipelines",
+        "GitHub Actions",
+        "Jenkins",
+        "GitLab CI/CD",
+        "TeamCity",
+        "Octopus Deploy",
+        "Argo CD"
+      ]
+    },
+    {
+      "name": "Infrastructure as Code",
+      "items": [
+        "Terraform (+Terragrunt)",
+        "Terratest",
+        "Terraform Cloud",
+        "ARM Templates",
+        "Bicep",
+        "Pulumi"
+      ]
+    },
+    {
+      "name": "Containerization & Orchestration",
+      "items": [
+        "Docker",
+        "Kubernetes",
+        "Helm",
+        "Rancher",
+        "Docker Swarm",
+        "Azure Kubernetes Service (AKS)",
+        "Azure Container Instances (ACI)",
+        "Azure Container Apps (ACA)"
+      ]
+    },
+    {
+      "name": "Collaboration & ChatOps",
+      "items": [
+        "Microsoft Teams",
+        "Slack",
+        "Discord",
+        "OpsGenie"
+      ]
+    },
+    {
+      "name": "Artifact Repositories & Package Management",
+      "items": [
+        "JFrog Artifactory",
+        "NuGet",
+        "ProGet",
+        "Azure Artifacts",
+        "GitHub Packages",
+        "Docker Hub",
+        "Azure Container Registry (ACR)"
+      ]
+    },
+    {
+      "name": "Feature Flags",
+      "items": [
+        "LaunchDarkly",
+        "Azure App Configuration",
+        "Feature Toggles"
+      ]
+    },
+    {
+      "name": "Monitoring, Scheduling & Observability",
+      "items": [
+        "Application Insights",
+        "Grafana",        
+        "Azure Monitor",        
+        "Azure Automation",
+        "Dynatrace",
+        "AppDynamics",
+        "Datadog",
+        "Autosys"
+      ]
+    },
+    {
+      "name": "Documentation & Knowledge Management",
+      "items": [
+        "SharePoint",
+        "Confluence",
+        "Azure DevOps Wiki",
+        "GitHub Wiki"
+      ]
+    },
+    {
+      "name": "Networking & Load Balancing",
+      "items": [
+        "Azure Virtual Network",
+        "Azure Load Balancer",
+        "Azure Application Gateway",
+        "Azure Front Door",
+        "Azure Traffic Manager",
+        "Azure ExpressRoute"
+      ]
+    },
+    {
+      "name": "Security, Compliance & Identity",
+      "items": [
+        "Azure Policy",
+        "Azure Blueprints",
+        "Azure Security Center",
+        "Microsoft Defender for Cloud",
+        "Azure Sentinel",
+        "Azure Key Vault",
+        "Azure B2C",
+        "Azure Active Directory",
+        "Azure RBAC",
+        "Managed Identities",
+        "Privileged Identity Management (PIM)",
+        "HashiCorp Vault"
+      ]
+    },
+    {
+      "name": "Scripting & Automation",
+      "items": [
+        "YAML",
+        "PowerShell",
+        "Azure CLI (az)",
+        "Bash",
+        "Shell",
+        "Makefile",
+        "Python"
+      ]
+    },
+    {
+      "name": "Development Tools",
+      "items": [
+        "Visual Studio 2008-2022",
+        "Visual Studio for Mac",
+        "VS Code",
+        "GitHub Codespaces",
+        "VS Code Remote"
+      ]
+    },
+    {
+      "name": "Source Control",
+      "items": [
+        "Git",
+        "SVN",
+        "Visual SourceSafe"
+      ]
+    },
+    {
+      "name": "Agile & Project Management",
+      "items": [
+        "Scrum",
+        "Azure Boards",
+        "JIRA",
+        "GitHub Projects",
+        "Trello"
+      ]
+    },
+    {
+      "name": "IT Service Management",
+      "items": [
+        "ServiceNow"
+      ]
+    },
+    {
+      "name": "Testing & Quality",
+      "items": [
+        "NUnit",
+        "Selenium",
+        "Playwright",
+        "Postman",
+        "Ranorex",
+        "SonarQube",
+        "SonarCloud",
+        "SonarLint",
+        "Snyk"
+      ]
+    },
+    {
+      "name": "Web & Service Frameworks",
+      "items": [
+        "ASP.NET Core",
+        "ASP.NET MVC",
+        "Web API",
+        "REST",
+        "WCF",
+        "React",
+        "Angular",
+        "Bootstrap"
+      ]
+    },
+    {
+      "name": "Programming Languages & Frameworks",
+      "items": [
+        "C#",
+        "VB.NET",
+        "Java",
+        "Python",
+        "JavaScript",
+        "TypeScript",
+        ".NET Framework",
+        ".NET Core / .NET 6+"
+      ]
+    },
+    {
+      "name": "Cloud Platforms",
+      "items": [
+        "Azure",
+        "Azure Stack",
+        "AWS",
+        "Google Cloud Platform (GCP)"
+      ]
+    },
+    {
+      "name": "Serverless & Event-Driven",
+      "items": [
+        "Azure Functions",
+        "Durable Functions",
+        "Azure Logic Apps",
+        "Azure Event Grid",
+        "Azure Event Hubs",
+        "Azure Service Bus"
+      ]
+    },
+    {
+      "name": "Storage & Data Access",
+      "items": [
+        "Azure Blob Storage",
+        "Azure Files",
+        "Azure Data Lake Storage",
+        "Azure Queue Storage",
+        "Azure Table Storage",
+        "Azure Cosmos DB",
+        "Azure SQL Database",
+        "SQL Server",
+        "MySQL",
+        "Actifio",
+        "Oracle Database",
+        "Entity Framework",
+        "Net-Tiers"
+      ]
+    },
+    {
+      "name": "API Management",
+      "items": [
+        "Azure API Management"
+      ]
+    },
+    {
+      "name": "Caching & Performance",
+      "items": [
+        "Azure Front Door",
+        "Azure Traffic Manager",
+        "Azure Cache for Redis"
+      ]
+    },
+    {
+      "name": "Backup & Disaster Recovery",
+      "items": [
+        "Azure Backup",
+        "Azure Site Recovery"
+      ]
+    },
+    {
+      "name": "Machine Learning & AI",
+      "items": [
+        "Azure AI Studio",
+        "Azure Machine Learning",
+        "Azure Cognitive Services",
+        "Azure OpenAI Service"
+      ]
+    }
+  ]
+}
