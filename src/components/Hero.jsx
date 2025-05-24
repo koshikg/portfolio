@@ -1,71 +1,93 @@
 import { motion } from 'framer-motion';
 import config from '../data/config.json';
+import profileImage from '../assets/kg.jpg';
 
 export default function Hero() {
   return (
-    <section id="hero" className="section flex flex-col justify-center items-center min-h-[80vh] text-center relative overflow-hidden">
-      {/* Azure-inspired hexagonal background pattern */}
-      <div className="absolute inset-0 z-0">
-        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern id="hexagons" width="50" height="43.4" patternUnits="userSpaceOnUse" patternTransform="scale(2)">
-              <path d="M25,3.4 L45,16.7 L45,43.4 L25,56.7 L5,43.4 L5,16.7 Z" stroke="currentColor" strokeWidth="0.5" fill="none" className="text-primary/10" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#hexagons)" />
-        </svg>
-      </div>
+    <section id="hero" className="pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden relative">
+      {/* Background gradient blobs */}
+      <div className="absolute top-0 left-0 w-[800px] h-[800px] bg-primary/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 dark:bg-primary/5"></div>
+      <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-3xl translate-x-1/3 translate-y-1/3 dark:bg-secondary/5"></div>
       
-      <div className="container z-10 relative">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <p className="text-primary font-mono mb-6 text-lg md:text-xl tracking-widest uppercase">👋, you have reached</p>
-        </motion.div>
-        
-        <motion.h1 
-          className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-dark dark:text-text-primary mb-4 drop-shadow-lg"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
-          {config.name}.
-        </motion.h1>
-        
-        <motion.h2 
-          className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary dark:text-primary-light mb-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          {config.title}
-        </motion.h2>
-        
-        <motion.p
-          className="text-gray-600 dark:text-text-secondary max-w-xl text-lg mb-8 mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-        >
-          <span className="inline-flex items-center">
-            <svg className="w-5 h-5 mr-2 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-            </svg>
-            {config.location}
-          </span>
-        </motion.p>
-        
-        <motion.div
-          className="mt-10 flex flex-col sm:flex-row justify-center gap-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-        >
-          <a href="#contact" className="btn btn-primary">Get In Touch</a>
-          <a href="#certifications" className="btn btn-outline">View Certifications</a>
-        </motion.div>
+      <div className="container relative z-10">
+        <div className="grid md:grid-cols-12 gap-12 items-center">
+          {/* Left side content */}
+          <div className="md:col-span-7 space-y-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="inline-block"
+            >
+              <span className="px-4 py-1.5 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary-light rounded-full font-medium text-sm">
+                DevOps & Cloud Expert
+              </span>
+            </motion.div>
+            
+            <motion.h1 
+              className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white leading-tight"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                {config.name}
+              </span> 
+              <span className="block mt-3">Simplify Automate Accelerate</span>
+            </motion.h1>
+            
+            <motion.p
+              className="text-gray-600 dark:text-gray-300 text-lg md:text-xl max-w-xl leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              Transforming enterprise delivery through strategic cloud adoption, modern DevOps pipelines, and scalable infrastructure for unprecedented efficiency and scalability.
+            </motion.p>
+            
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="flex flex-wrap gap-4 pt-4"
+            >
+              <a href="#contact" className="btn btn-primary">
+                Work with me
+              </a>
+              <a href="#experience" className="btn btn-outline">
+                View my experience
+              </a>
+            </motion.div>
+            
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="flex items-center gap-2 text-gray-600 dark:text-gray-400"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+              </svg>
+              <span>{config.location}</span>
+            </motion.div>
+          </div>
+            {/* Right side profile image */}
+          <motion.div 
+            className="md:col-span-5 relative aspect-square hidden md:block"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary opacity-20 dark:opacity-40 rounded-3xl rotate-3"></div>
+            <div className="absolute inset-0 border-2 border-primary/30 dark:border-primary/50 rounded-3xl -rotate-3"></div>            <div className="absolute inset-0 m-4 overflow-hidden rounded-2xl">
+              <img 
+                src={profileImage} 
+                alt="Kaushik Gayal" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

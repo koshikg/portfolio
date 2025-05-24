@@ -8,26 +8,31 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Azure brand color
-        primary: '#0078D4', 
-        'primary-dark': '#106EBE',
-        'primary-light': '#50C8FF',
-        // Azure DevOps color
-        secondary: '#0072C6',
+        // Zarla-inspired colors
+        primary: '#7C3AED', // Vibrant purple
+        'primary-dark': '#6D28D9',
+        'primary-light': '#A78BFA',
+        // Secondary color
+        secondary: '#10B981', // Teal/green
+        'secondary-dark': '#059669',
+        'secondary-light': '#6EE7B7',
+        // Accent color
+        accent: '#F59E0B', // Amber
         // Dark mode colors
-        dark: '#1B1B1B',
-        'dark-secondary': '#252525',
+        dark: '#121212',
+        'dark-secondary': '#1E1E1E',
         // Text colors
-        'text-primary': '#F8F8F8',
-        'text-secondary': '#A7CAE8',
-        // Status colors (similar to Azure portal)
-        'azure-info': '#60A9FF',
-        'azure-success': '#8CCD42',
-        'azure-warning': '#FCD116',
-        'azure-error': '#F25022',
-      },
-      fontFamily: {
-        'segoe': ['Segoe UI', 'sans-serif'], // Microsoft's Segoe UI font
+        'text-primary': '#F9FAFB',
+        'text-secondary': '#E5E7EB',
+        // Additional colors
+        'zarla-info': '#3B82F6',
+        'zarla-success': '#10B981',
+        'zarla-warning': '#F59E0B',
+        'zarla-error': '#EF4444',
+      },      fontFamily: {
+        'sans': ['Inter', 'sans-serif'],
+        'display': ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+        'mono': ['JetBrains Mono', 'monospace'],
       },
     },
   },
