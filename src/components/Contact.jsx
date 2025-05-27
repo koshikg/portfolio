@@ -219,9 +219,6 @@ export default function Contact() {
                 </div>
                 <h4 className="text-xl font-bold text-gray-900 dark:text-white font-display">Availability</h4>
               </div>
-              <p className="text-gray-600 dark:text-gray-300 text-lg">
-                I'm currently available for consulting and freelance projects. My typical availability for new projects starts within 2-4 weeks.
-              </p>
             </div>
           </motion.div>
         </div>

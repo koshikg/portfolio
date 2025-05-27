@@ -126,9 +126,11 @@ export default function Experience() {
             </div>
             
             {/* Timeline for roles */}
-            <div className="relative">              {/* Vertical line */}
-              <div className="absolute left-8 md:left-[6.5rem] top-0 bottom-0 w-1 bg-gradient-to-b from-primary/30 to-secondary/30 dark:from-primary/50 dark:to-secondary/50 rounded-full"></div>
-                <div className="space-y-8 relative z-10">
+            <div className="relative">
+              {/* Vertical line */}
+              <div className="absolute left-8 md:left-[5.5rem] top-0 bottom-0 w-1 bg-gradient-to-b from-primary/30 to-secondary/30 dark:from-primary/50 dark:to-secondary/50 rounded-full"></div>
+              
+              <div className="space-y-8 relative z-10">
                 {selectedCompanyData.roles.map((role, index) => (
                   <div key={role.uniqueId} className="relative">
                     {/* Timeline dot */}
@@ -136,7 +138,7 @@ export default function Experience() {
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
                       transition={{ delay: index * 0.1, duration: 0.5, type: 'spring' }}
-                      className={`absolute left-7 md:left-[6.25rem] top-6 w-3 h-3 rounded-full border-2 ${
+                      className={`absolute left-7 md:left-[5.25rem] top-6 w-3 h-3 rounded-full border-2 ${
                         activeRoleId === role.uniqueId
                           ? 'bg-primary border-white dark:border-dark-secondary'
                           : 'bg-white dark:bg-dark-secondary border-primary/50'
@@ -149,27 +151,22 @@ export default function Experience() {
                       animate={{ opacity: 1, x: 0 }}
                       whileHover={{ y: -5, boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}
                       transition={{ duration: 0.3, delay: index * 0.1 }}
-                      onClick={() => setActiveRoleId(role.uniqueId)}                      className={`flex flex-col md:flex-row ml-16 md:ml-32 pl-8 pr-6 py-4 md:py-6 rounded-xl cursor-pointer transition-all ${
+                      onClick={() => setActiveRoleId(role.uniqueId)}
+                      className={`flex flex-col md:flex-row ml-16 md:ml-28 pl-8 pr-6 py-4 md:py-6 rounded-xl cursor-pointer transition-all ${
                         activeRoleId === role.uniqueId
                           ? 'bg-gradient-to-br from-primary/5 to-secondary/5 dark:from-primary/10 dark:to-secondary/10 border border-primary/20'
                           : 'bg-white dark:bg-dark-secondary hover:bg-gray-50 dark:hover:bg-gray-800/70'
                       }`}
-                    >                      {/* Date column - fixed width */}
-                      <div className="absolute -left-2 md:-left-4 top-5 md:top-6 w-24 md:w-32 text-right">
-                        <div className={`flex flex-col font-mono text-xs ${
+                    >
+                      {/* Year */}
+                      <div className="absolute left-0 top-5 md:top-6 w-14 md:w-20 text-right">
+                        <span className={`font-mono text-sm font-bold ${
                           activeRoleId === role.uniqueId
                             ? 'text-primary dark:text-primary-light'
                             : 'text-gray-500 dark:text-gray-400'
                         }`}>
-                          <span className="font-bold">
-                            {/* Extract and display the month */}
-                            {role.range.split(' ')[0]}
-                          </span>
-                          <span>
-                            {/* Extract and display the year */}
-                            {role.range.split(' ')[1]?.replace(',', '')}
-                          </span>
-                        </div>
+                          {role.range.split(' - ')[0].split(' ')[0]}
+                        </span>
                       </div>
                       
                       <div className="flex-1">
