@@ -31,6 +31,9 @@ jobs:
 
       - name: Build
         run: npm run build
+      # Ensure the CNAME file is included in the artifact so GitHub Pages sets the custom domain
+      - name: Copy CNAME into build output
+        run: cp CNAME dist/CNAME
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3.0.1
         with:
