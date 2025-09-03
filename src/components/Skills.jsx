@@ -81,20 +81,15 @@ const getCategoryIcon = (categoryName) => {
 };
 
 export default function Skills() {
-  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState(0); // Default to first category
   const [hoveredSkill, setHoveredSkill] = useState(null);
-
-  // Function to handle category click
-  const handleCategoryClick = (categoryIndex) => {
-    setSelectedCategory(selectedCategory === categoryIndex ? null : categoryIndex);
-  };
 
   return (
     <section id="skills" className="py-24 md:py-32 relative overflow-hidden">
       {/* Background accent */}
       <div className="absolute left-0 bottom-0 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2 dark:bg-secondary/10"></div>
       <div className="absolute right-0 top-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2 dark:bg-primary/10"></div>
-      
+
       <div className="container mx-auto relative z-10 px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -111,77 +106,28 @@ export default function Skills() {
             Explore my technical expertise across cloud platforms, DevOps practices, and infrastructure automation
           </p>
         </motion.div>
-        
-        {/* Category Selector - Interactive Grid */}
-        <div className="mb-16">
-          <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-            {skillsData.categories.map((category, index) => (
-              <motion.div
-                key={category.name}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
-                viewport={{ once: true, margin: "-50px" }}
-                onClick={() => handleCategoryClick(index)}
-                whileHover={{ scale: 1.05, y: -5 }}
-                whileTap={{ scale: 0.95 }}
-                className={`cursor-pointer relative w-24 md:w-28 aspect-square flex flex-col items-center justify-center p-2 rounded-xl ${
-                  selectedCategory === index 
-                    ? 'bg-gradient-to-br from-primary to-secondary text-white shadow-lg shadow-primary/20 dark:shadow-primary/40' 
-                    : 'bg-white dark:bg-dark-secondary border border-gray-200 dark:border-gray-800 hover:border-primary/50 dark:hover:border-primary/50'
-                } transition-all duration-300`}
-              >
-                <div className={`${selectedCategory === index ? 'text-white' : 'text-primary dark:text-primary-light'}`}>
-                  {getCategoryIcon(category.name)}
-                </div>
-                <p className={`mt-2 text-xs md:text-sm font-medium text-center ${selectedCategory === index ? 'text-white' : 'text-gray-700 dark:text-gray-300'}`}>
-                  {category.name.split('&')[0].trim().split(' ').slice(0, 2).join(' ')}
-                </p>
-                {selectedCategory === index && (
-                  <motion.div 
-                    className="absolute -bottom-1.5 left-1/2 w-3 h-3 bg-primary rotate-45 -translate-x-1/2" 
-                    layoutId="categoryIndicator"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                  />
-                )}
-              </motion.div>
-            ))}
-          </div>
-        </div>
-          {/* Skills Display */}
-        <AnimatePresence mode="wait">
-          {selectedCategory !== null && (
-            <motion.div
-              key={selectedCategory}
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="mb-16"
-            >
-              <motion.div 
-                className="bg-white dark:bg-dark-secondary shadow-xl shadow-gray-200/50 dark:shadow-none rounded-2xl overflow-hidden border border-gray-100/50 dark:border-gray-800/50 backdrop-blur-sm"
-                initial={{ y: 20 }}
-                animate={{ y: 0 }}
-                transition={{ duration: 0.3, delay: 0.1 }}
-              >
-                <div className="p-8 md:p-10">
-                  <div className="flex flex-col md:flex-row md:items-center gap-4 mb-8">
-                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center">
-                      <div className="text-white">
-                        {getCategoryIcon(skillsData.categories[selectedCategory].name)}
-                      </div>
+
+        {/* Layout: details left, categories right */}
+        <div className="flex flex-col md:flex-row gap-6 md:gap-10">
+          {/* Details (left on desktop) */}
+          <div className="flex-1 order-2 md:order-1 md:pr-4">
+            <div className="bg-white dark:bg-dark-secondary shadow-xl shadow-gray-200/50 dark:shadow-none rounded-2xl overflow-hidden border border-gray-100/50 dark:border-gray-800/50 backdrop-blur-sm">
+              <div className="p-6 md:p-12">
+                <div className="flex flex-col md:flex-row md:items-center gap-4 mb-8">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center">
+                    <div className="text-white">
+                      {getCategoryIcon(skillsData.categories[selectedCategory].name)}
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white font-display">
-                      {skillsData.categories[selectedCategory].name}
-                    </h3>
                   </div>
-                  
-                  <div className="flex flex-wrap gap-3">
-                    {skillsData.categories[selectedCategory].items.map((skill, idx) => (
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white font-display">
+                    {skillsData.categories[selectedCategory].name}
+                  </h3>
+                </div>
+                <div className="flex flex-wrap gap-4">
+                  {skillsData.categories[selectedCategory].items.length === 0 ? (
+                    <span className="text-gray-400">No skills listed yet.</span>
+                  ) : (
+                    skillsData.categories[selectedCategory].items.map((skill, idx) => (
                       <motion.span
                         key={skill}
                         initial={{ opacity: 0, scale: 0.8 }}
@@ -190,19 +136,42 @@ export default function Skills() {
                         onMouseEnter={() => setHoveredSkill(skill)}
                         onMouseLeave={() => setHoveredSkill(null)}
                         className={`px-4 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
-                          hoveredSkill === skill 
+                          hoveredSkill === skill
                             ? 'bg-gradient-to-r from-primary to-secondary text-white shadow-md shadow-primary/20 scale-105'
                             : 'bg-gray-100/80 dark:bg-gray-800/80 text-gray-700 dark:text-gray-300 hover:bg-gray-200/80 dark:hover:bg-gray-700/80'
                         } cursor-pointer`}
                       >
                         {skill}
                       </motion.span>
-                    ))}
-                  </div>
+                    ))
+                  )}
                 </div>
-              </motion.div>
-            </motion.div>
-          )}        </AnimatePresence>
+              </div>
+            </div>
+          </div>
+          {/* Categories (right on desktop) */}
+          <div className="flex-1 order-1 md:order-2 mb-8 md:mb-0">
+            <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-x-4 gap-y-6">
+              {skillsData.categories.map((cat, idx) => (
+                <button
+                  key={cat.name}
+                  title={cat.name}
+                  className={`group w-full flex flex-col items-center justify-start px-3 py-3 rounded-xl transition font-medium text-[10px] sm:text-xs md:text-[11px] leading-tight min-h-[110px] ${
+                    selectedCategory === idx
+                      ? 'bg-primary/15 text-primary shadow-inner ring-1 ring-primary/30'
+                      : 'bg-white dark:bg-dark-secondary/60 hover:bg-gray-100 dark:hover:bg-dark-secondary text-gray-700 dark:text-gray-300 border border-transparent hover:border-primary/30'
+                  }`}
+                  onClick={() => setSelectedCategory(idx)}
+                >
+                  <span className={`mb-2 w-6 h-6 flex items-center justify-center ${selectedCategory === idx ? 'text-primary' : 'text-primary/80 dark:text-primary-light'}`}>{getCategoryIcon(cat.name)}</span>
+                  <span className="text-center line-clamp-3 break-words">
+                    {cat.name}
+                  </span>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
