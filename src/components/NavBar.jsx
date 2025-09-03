@@ -70,13 +70,14 @@ export default function NavBar() {
               </motion.a>
             ))}
             <motion.a 
-              href="#contact"
+              href="https://resume.gayal.dev"
               className="ml-2 btn btn-primary py-2 px-5"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.1 * config.navLinks.length }}
+              target="_blank" rel="noopener noreferrer"
             >
-              Contact
+              View Resume
             </motion.a>
           </nav>
           
@@ -116,11 +117,12 @@ export default function NavBar() {
                 </a>
               ))}
               <a 
-                href="#contact"
+                href="https://resume.gayal.dev"
                 className="btn btn-primary py-3 text-center mt-2"
+                target="_blank" rel="noopener noreferrer"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Contact
+                Download Resume
               </a>
             </div>
           </motion.nav>
