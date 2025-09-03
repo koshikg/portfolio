@@ -5,9 +5,17 @@
     "location": "Melbourne, Australia",
     "range": "December 2023 - Present",
     "responsibilities": [
-      "Consulting for Rio Tinto, integrating DevSecOps practices into both legacy and modern systems",
-      "Improving security and automation across large-scale global enterprise environments",
-      "Delivering infrastructure and CI/CD pipeline enhancements using Azure and GitHub Actions"
+      "DevSecOps implentation and process improvements across 8 different projects, implementing shift-left security scanning, automated compliance, testing, standardizing delivery pipelines, branching and observability",
+      "Consulted and implemented zero trust architecture as a template for internal projects",
+      "Modern CD implementation using LaunchDarkly, ArgoCD, HELM",
+      "Ranorex UI testing implemention for windows applications",
+      "Implemented Agentic DevOps leveraging GitHub for source code and ADO for existing boards and pipelines for a windows application project",
+      "Consulting client for scalable implemention of DevSecOps using Internal Developer Platforms and creation of shared Terraform modules",
+      "Migrated build pipelines from TeamCity and deploy pipelines from Octopus Deploy to Azure DevOps for a big legacy complex project generating highest revenue for RioTinto",
+      "Implemented templates for Managed DevOps Pools which will be consumed by whole org on a self service basis",
+      "On prem Docker Swarm implementation for a modernization of a legacy project with server configs using Ansible",
+      "Standardising notifications using Azure Functions, Logic Apps and Teams Notifications using Adaptive Cards",
+      "Knowledge sharing, mentoring, documentation to improve the learning culture in the org"
     ]
   },
   {
