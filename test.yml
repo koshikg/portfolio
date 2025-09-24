@@ -3,6 +3,9 @@ trigger:
  branches:
   include:
     - main
+ paths:
+  include: 
+    - 'index.html'
 pr:
   branches:
    include:
