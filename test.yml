@@ -1,0 +1,18 @@
+trigger:
+ batch: true
+ branches:
+  include:
+    - main
+pr:
+  branches:
+   include:
+     - main
+
+name: $(runReason)${{ coalesce( variables['runBranch'], '$(System.PullRequest.SourceBranch)') }}${{ coalesce( variables['revNumber'], '$(Rev:_r)') }}
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: echo "Hello World"
+  displayName: 'Display Hello World'
