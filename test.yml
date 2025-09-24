@@ -15,4 +15,4 @@ pool:
 
 steps:
 - script: echo "Hello World"
-  displayName: 'Display Hello World'
+  displayName: 'Hello World Test!'
